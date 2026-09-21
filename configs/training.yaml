@@ -1,0 +1,65 @@
+# Final YOLO26x-seg training configuration
+
+model: yolo26x-seg.pt
+data: data/yolo_dataset/data.yaml
+
+project: runs
+name: X_yolo26x_tuned_exact
+
+# Fixed training settings
+imgsz: 1024
+epochs: 200
+batch: 16
+device: 0
+workers: 8
+patience: 100
+pretrained: true
+seed: 42
+
+# Optimizer
+optimizer: MuSGD
+
+# Learning rate and optimizer parameters
+lr0: 0.00155
+lrf: 0.52058
+momentum: 0.90392
+weight_decay: 0.0004
+
+# Warmup
+warmup_epochs: 1.95711
+warmup_momentum: 0.82205
+warmup_bias_lr: 0.09999
+
+# Loss parameters
+box: 8.98377
+cls: 0.70487
+cls_pw: 0.02955
+dfl: 1.21072
+
+# Geometric augmentation
+degrees: 67.97742
+translate: 0.23319
+scale: 0.51224
+shear: 0.91236
+perspective: 0.00028
+flipud: 0.50809
+fliplr: 0.4445
+
+# Composite augmentation
+mosaic: 0.48298
+close_mosaic: 57
+mixup: 0.08217
+cutmix: 0.08062
+copy_paste: 0.1908
+copy_paste_mode: flip
+
+# Colour augmentation
+hsv_h: 0.01299
+hsv_s: 0.44249
+hsv_v: 0.42514
+bgr: 0.00104
+
+# Regularisation / augmentation
+dropout: 0.03592
+auto_augment: randaugment
+erasing: 0.4

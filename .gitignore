@@ -1,0 +1,25 @@
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+
+# Large input and generated datasets
+data/dops/
+data/tree_crown_reference_data/
+data/yolo_dataset/
+data/source_full_tiles_crop_val_test/
+
+# Model weights and run outputs
+runs/
+*.pt
+
+# Temporary files
+*.tmp
+*.bak
